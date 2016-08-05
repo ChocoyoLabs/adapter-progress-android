@@ -18,9 +18,43 @@ android {
     }
 }
 
+repositories {
+    maven {
+        url  "http://dl.bintray.com/android/android-tools"
+    }
+}
+
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.1.1'
     compile 'com.android.support:recyclerview-v7:24.1.1'
 }
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'adapter-progress'
+
+    publishedGroupId = 'com.chocoyo.labs'
+    libraryName = 'Adapter Progress'
+    artifact = 'adapter-progress'
+
+    libraryDescription = 'Chocoyo Labs Android Library for Adapter Progress'
+
+    siteUrl = 'https://github.com/ChocoyoLabs/adapter-progress-android'
+    gitUrl = 'https://github.com/ChocoyoLabs/adapter-progress-android.git'
+
+    libraryVersion = '0.0.1'
+
+    developerId = 'chocoyolabs'
+    developerName = 'Chocoyo Labs'
+    developerEmail = 'info@chocoyolabs.com'
+
+    licenseName = 'The MIT License'
+    licenseUrl = 'http://opensource.org/licenses/mit-license.php'
+    allLicenses = ["MIT"]
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
