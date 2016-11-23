@@ -18,7 +18,7 @@ public class AdapterProgress extends RecyclerView.Adapter<AdapterProgress.ViewHo
     public AdapterProgress.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                          int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.progress_bar, parent, false);
+                .inflate(R.layout.chocoyo_labs_adapter_progress, parent, false);
         return new ViewHolder(view);
     }
 
